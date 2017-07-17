@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		985AF5B41F1CEE14008A69B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AF5B31F1CEE14008A69B1 /* AppDelegate.swift */; };
-		985AF5B61F1CEE14008A69B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AF5B51F1CEE14008A69B1 /* ViewController.swift */; };
 		985AF5B91F1CEE14008A69B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985AF5B71F1CEE14008A69B1 /* Main.storyboard */; };
 		985AF5BB1F1CEE14008A69B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985AF5BA1F1CEE14008A69B1 /* Assets.xcassets */; };
 		985AF5BE1F1CEE14008A69B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985AF5BC1F1CEE14008A69B1 /* LaunchScreen.storyboard */; };
+		985AF5CA1F1CFD0B008A69B1 /* OsagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AF5C91F1CFD0B008A69B1 /* OsagoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		985AF5B01F1CEE14008A69B1 /* OSAGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSAGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985AF5B31F1CEE14008A69B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		985AF5B51F1CEE14008A69B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		985AF5B81F1CEE14008A69B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		985AF5BA1F1CEE14008A69B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		985AF5BD1F1CEE14008A69B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		985AF5BF1F1CEE14008A69B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		985AF5C91F1CFD0B008A69B1 /* OsagoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OsagoViewController.swift; path = ../OsagoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				985AF5B31F1CEE14008A69B1 /* AppDelegate.swift */,
-				985AF5B51F1CEE14008A69B1 /* ViewController.swift */,
+				985AF5C91F1CFD0B008A69B1 /* OsagoViewController.swift */,
 				985AF5B71F1CEE14008A69B1 /* Main.storyboard */,
 				985AF5BA1F1CEE14008A69B1 /* Assets.xcassets */,
 				985AF5BC1F1CEE14008A69B1 /* LaunchScreen.storyboard */,
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				985AF5B61F1CEE14008A69B1 /* ViewController.swift in Sources */,
+				985AF5CA1F1CFD0B008A69B1 /* OsagoViewController.swift in Sources */,
 				985AF5B41F1CEE14008A69B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

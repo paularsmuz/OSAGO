@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Osago View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OSAGO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OsagoViewController" customModule="OSAGO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -83,17 +83,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Коэффициент мощности: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-F3-4Kd">
+                                <rect key="frame" x="46" y="406.5" width="153" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итого стоимость полиса: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0v-YU-Jxm">
                                 <rect key="frame" x="46" y="452.5" width="184.5" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="49" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="lzd-j9-I29">
-                                <rect key="frame" x="44" y="360.5" width="287" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="18" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-BC-rw4" userLabel="AgeHorizontal Slider">
+                                <rect key="frame" x="44" y="222" width="287" height="31"/>
+                                <connections>
+                                    <action selector="changeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="K2k-j9-Y2V"/>
+                                    <action selector="changeSliderAge:" destination="BYZ-38-t0r" eventType="valueChanged" id="n84-g3-jBm"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="18" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-BC-rw4">
-                                <rect key="frame" x="44" y="222.5" width="287" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="49" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="lzd-j9-I29" userLabel="PowerHorizontal Slider">
+                                <rect key="frame" x="44" y="360.5" width="287" height="31"/>
+                                <connections>
+                                    <action selector="changeSliderPower:" destination="BYZ-38-t0r" eventType="valueChanged" id="FDd-8I-7rE"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="от 18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mo-xb-28k">
                                 <rect key="frame" x="46" y="208" width="27.5" height="13.5"/>
@@ -119,16 +132,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Коэффициент мощности: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-F3-4Kd">
-                                <rect key="frame" x="46" y="406.5" width="153" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ir-4M-MRg" userLabel="Age">
+                                <rect key="frame" x="200" y="284.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csl-rL-4Eq" userLabel="Power">
+                                <rect key="frame" x="200" y="414.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXm-Vn-x5S" userLabel="Total">
+                                <rect key="frame" x="238" y="461" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Q0v-YU-Jxm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="09X-GH-vGv"/>
+                            <constraint firstItem="rXm-Vn-x5S" firstAttribute="leading" secondItem="Q0v-YU-Jxm" secondAttribute="trailing" constant="7.5" id="0L7-wW-O8b"/>
+                            <constraint firstItem="csl-rL-4Eq" firstAttribute="leading" secondItem="cf4-F3-4Kd" secondAttribute="trailing" constant="1" id="2ZS-fq-G2q"/>
                             <constraint firstItem="Vkj-hj-y8L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Sk-e7-6hQ"/>
                             <constraint firstItem="fQx-T2-Ovx" firstAttribute="top" secondItem="3YW-SP-Lkl" secondAttribute="bottom" constant="28.5" id="7cN-CJ-NZN"/>
                             <constraint firstItem="Yyb-df-Lbz" firstAttribute="top" secondItem="4Bu-LC-CSB" secondAttribute="bottom" constant="8" id="7ur-ZU-QQy"/>
@@ -146,18 +173,21 @@
                             <constraint firstItem="4Bu-LC-CSB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="NFW-jR-8Jw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1yE-6P-CDY" secondAttribute="trailing" constant="30" id="P4V-TW-HHM"/>
                             <constraint firstItem="Vkj-hj-y8L" firstAttribute="top" secondItem="Yyb-df-Lbz" secondAttribute="bottom" constant="22" id="P5x-Mb-TUb"/>
+                            <constraint firstItem="cf4-F3-4Kd" firstAttribute="centerY" secondItem="csl-rL-4Eq" secondAttribute="centerY" id="P6N-Rk-oLM"/>
                             <constraint firstItem="cf4-F3-4Kd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="PFY-OU-Ezs"/>
                             <constraint firstItem="Yyb-df-Lbz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Peu-Y4-VDI"/>
                             <constraint firstItem="lzd-j9-I29" firstAttribute="top" secondItem="fQx-T2-Ovx" secondAttribute="bottom" constant="19" id="Tob-AI-Ic8"/>
                             <constraint firstItem="Wzj-kU-kwi" firstAttribute="centerY" secondItem="1yE-6P-CDY" secondAttribute="centerY" id="UF0-b4-mN1"/>
                             <constraint firstItem="Wzj-kU-kwi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="W07-lo-8Nr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AvQ-0x-kdZ" secondAttribute="trailing" constant="30" id="W93-OY-mYW"/>
+                            <constraint firstItem="3YW-SP-Lkl" firstAttribute="centerY" secondItem="2Ir-4M-MRg" secondAttribute="centerY" id="YBJ-x6-JHC"/>
                             <constraint firstItem="3YW-SP-Lkl" firstAttribute="top" secondItem="3UJ-BC-rw4" secondAttribute="bottom" constant="25" id="ZqQ-jJ-o0Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FQz-z4-wU4" secondAttribute="trailing" constant="20" id="adp-Bu-HGH"/>
                             <constraint firstItem="lzd-j9-I29" firstAttribute="top" secondItem="AvQ-0x-kdZ" secondAttribute="bottom" constant="2" id="dgW-as-AQD"/>
                             <constraint firstItem="lzd-j9-I29" firstAttribute="top" secondItem="NeQ-nB-EvJ" secondAttribute="bottom" constant="2" id="dka-kY-Dvc"/>
                             <constraint firstItem="3YW-SP-Lkl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="eNa-rF-g2y"/>
                             <constraint firstItem="FQz-z4-wU4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="fX4-CY-8O3"/>
+                            <constraint firstItem="2Ir-4M-MRg" firstAttribute="leading" secondItem="3YW-SP-Lkl" secondAttribute="trailing" constant="8" id="h3C-VM-hqK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lzd-j9-I29" secondAttribute="trailing" constant="30" id="jCd-d2-Gcd"/>
                             <constraint firstItem="Yyb-df-Lbz" firstAttribute="centerY" secondItem="LoS-JF-Knw" secondAttribute="centerY" id="m0A-oU-6Vz"/>
                             <constraint firstItem="cf4-F3-4Kd" firstAttribute="top" secondItem="lzd-j9-I29" secondAttribute="bottom" constant="16" id="m55-Rn-xq6"/>
@@ -165,14 +195,20 @@
                             <constraint firstItem="4Bu-LC-CSB" firstAttribute="top" secondItem="Wzj-kU-kwi" secondAttribute="bottom" constant="8" id="nT0-nr-Oh4"/>
                             <constraint firstItem="lzd-j9-I29" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="qmA-oh-DND"/>
                             <constraint firstItem="fQx-T2-Ovx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tpj-TN-Wbn"/>
+                            <constraint firstItem="Q0v-YU-Jxm" firstAttribute="centerY" secondItem="rXm-Vn-x5S" secondAttribute="centerY" id="uEn-of-4ZT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dhT-ps-eAM" secondAttribute="trailing" constant="30" id="wWL-Rw-h1P"/>
                             <constraint firstItem="3UJ-BC-rw4" firstAttribute="top" secondItem="6mo-xb-28k" secondAttribute="bottom" constant="1" id="ylM-z2-IXd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="koeffAge" destination="2Ir-4M-MRg" id="tT3-Gd-en4"/>
+                        <outlet property="koeffPower" destination="csl-rL-4Eq" id="SaV-Pg-z9B"/>
+                        <outlet property="totalSum" destination="rXm-Vn-x5S" id="RLG-ym-2p2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-825" y="102"/>
         </scene>
     </scenes>
 </document>
