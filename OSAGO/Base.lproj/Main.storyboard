@@ -95,14 +95,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="18" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-BC-rw4" userLabel="AgeHorizontal Slider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="18" minValue="18" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-BC-rw4" userLabel="AgeHorizontal Slider">
                                 <rect key="frame" x="44" y="222" width="287" height="31"/>
                                 <connections>
-                                    <action selector="changeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="K2k-j9-Y2V"/>
                                     <action selector="changeSliderAge:" destination="BYZ-38-t0r" eventType="valueChanged" id="n84-g3-jBm"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="49" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="lzd-j9-I29" userLabel="PowerHorizontal Slider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="49" minValue="49" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="lzd-j9-I29" userLabel="PowerHorizontal Slider">
                                 <rect key="frame" x="44" y="360.5" width="287" height="31"/>
                                 <connections>
                                     <action selector="changeSliderPower:" destination="BYZ-38-t0r" eventType="valueChanged" id="FDd-8I-7rE"/>
@@ -114,8 +113,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="до 120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbX-Ob-7Wd">
-                                <rect key="frame" x="296" y="208" width="36" height="13.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="до 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbX-Ob-7Wd">
+                                <rect key="frame" x="296" y="207" width="36" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
